@@ -1,0 +1,2082 @@
+import matplotlib.pyplot as plt
+import numpy as np
+print("-------------------------TAREA 1_1-------------------------")
+print("Ejercicio 1")
+
+
+vector1 = np.array([3, 0])
+vector2 = np.array([2,3])
+vector3 = np.array([-2,3])
+vector4 = np.array([3,-2])
+fig, ax = plt.subplots()
+ax.quiver(0, 0, vector1[0], vector1[1], angles='xy', scale_units='xy', scale=1, color='r')
+ax.quiver(0, 0, vector2[0], vector2[1], angles='xy', scale_units='xy', scale=1, color='b')
+ax.quiver(0, 0, vector3[0], vector3[1], angles='xy', scale_units='xy', scale=1, color='y')
+ax.quiver(0, 0, vector4[0], vector4[1], angles='xy', scale_units='xy', scale=1, color='g')
+ax.set_xlim(-4, 5)
+ax.set_ylim(-2, 5)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_title("Ejercicio 1")
+ax.grid()
+plt.show()
+
+
+# ///////////////////////////////////////////////////////////////////////
+
+
+print("Ejercicio 2")
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+
+vector1=np.array([0, 2, 0])
+vector2=np.array([3, 2, 1])
+vector3=np.array([1, -2, 1])
+vector4=np.array([-1, -1, 2])
+origin = np.array([0, 0, 0])
+
+
+
+
+ax.quiver(origin[0], origin[1], origin[2], vector1[0], vector1[1], vector1[2], color='r', arrow_length_ratio=0.1)
+ax.quiver(origin[0], origin[1], origin[2], vector2[0], vector2[1], vector2[2], color='b', arrow_length_ratio=0.1)
+ax.quiver(origin[0], origin[1], origin[2], vector3[0], vector3[1], vector3[2], color='y', arrow_length_ratio=0.1)
+ax.quiver(origin[0], origin[1], origin[2], vector4[0], vector4[1], vector4[2], color='g', arrow_length_ratio=0.1)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.set_title("Ejercicio 2")
+
+
+ax.set_xlim([-1, 3])
+ax.set_ylim([-2, 2])
+ax.set_zlim([0, 3])
+plt.show()
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 3")
+#Determinar el vector de inicio
+vectorInicial=np.array([1,2,3])
+#Resta del vector inicial con cada vector
+res1=vectorInicial-vector1
+res2=vectorInicial-vector2
+res3=vectorInicial-vector3
+res4=vectorInicial-vector4
+#Mostrar los resultados
+print("a)",res1)
+print("b)",res2)
+print("c)",res3)
+print("d)",res4)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 4")
+a=25/2
+raiz=a**(1/2)
+vector1 = np.array([0,4])
+vector2 = np.array([raiz,raiz])
+vector3 = np.array([raiz,4+raiz])
+fig, ax = plt.subplots()
+ax.quiver(0, 0, vector1[0], vector1[1], angles='xy', scale_units='xy', scale=1, color='r' , label="4km al Norte")
+ax.quiver(0, 4, vector2[0], vector2[1], angles='xy', scale_units='xy', scale=1, color='b', label="5km al Noroeste")
+ax.quiver(0, 0, vector3[0], vector3[1], angles='xy', scale_units='xy', scale=1, color='y', label="Vector neto")
+ax.set_xlim(-1, 5)
+ax.set_ylim(-2, 8)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_title("Ejercicio 4")
+ax.legend()
+ax.grid()
+plt.show()
+
+
+# ///////////////////////////////////////////////////////////////////////
+#Vectores para los ejercicios 5 y 6
+a=np.array([0,2,0])
+b=np.array([3,2,1])
+c=np.array([1,-2,1])
+d=np.array([-1,-1,-2])
+#Ejercicio 15
+print("Ejercicio 5")
+#Mostrar el resultado
+print(2*a+3*c)
+#Ejercicio 16
+print("Ejercicio 6")
+#Mostrar el resultado
+print(2*c-3*b-d)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 7")
+print ("a + b + 6c")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 8")
+print ("x = 3a")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 9")
+print ("x = 3/2(a-b)")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 10")
+#Vectores
+u=np.array([-2,3])
+v=np.array([2,1])
+print ("w = ",-u-2*v)
+
+
+print("-------------------------TAREA 1_2-------------------------")
+print ("Ejercicio 1")
+#Definir los vectores
+vector1=np.array([1.5,0.4,-2.1])
+vector2=np.array([3,5.2,-0.6])
+#Producto punto
+producto_punto=np.dot(vector1,vector2)
+print("u·v=",producto_punto)
+
+
+# ///////////////////////////////////////////////////////////////////////
+
+
+print("Ejercicio 2")
+#Definir las raices que se usaran
+raiz2=2**(1/2)
+raiz3=3**(1/2)
+#Definir los vectores
+vector1=np.array([1,raiz2,raiz3,0])
+vector2=np.array([4,-raiz2,0,-5])
+#Producto punto
+R=np.dot(vector1,vector2)
+print("u·v=",R)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 3")
+#Norma del vector
+norma=np.linalg.norm(vector1)
+print("||u||=√6")
+print("Vector unitario= ( 1/√6 , 1/√3 , 1/√2 , 0)")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print ("Ejercicio 4")
+#Vectores
+u=np.array([1,2,3])
+v=np.array([2,3,1])
+#Distancia entre los vectores
+distancia = np.linalg.norm(u-v)
+print("Distancia entre los vectores u y v=", distancia)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 5")
+#Definir los vectores
+vector1=np.array([2,-1,1])
+vector2=np.array([1,-2,-1])
+#Producto punto
+producto_punto=np.dot(vector1, vector2)
+#Norma de los vectores
+norma1=np.linalg.norm(vector1)
+norma2=np.linalg.norm(vector2)
+#Calculo del angulo en radianes
+angulo_radianes=np.arccos(producto_punto/(norma1 * norma2))
+#Conversion del angulo a degradianes
+angulo_grados=np.degrees(angulo_radianes)
+print("Ángulo en grados:", angulo_grados, "≈ 60°")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 6")
+#Vectores
+u=np.array([-4,1,-1])
+v=np.array([5,0,-2])
+w=np.array([1,1,-3])
+#Producto punto
+uv=np.dot(u,v)
+uw=np.dot(u,w)
+print("Al ser AB=u·v=",uv," y AC=u·w=",uw, " entonces los vectores AB y AC son ortogonales y por lo tanto el trinagulo es rectangulo")
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 7")
+Vavion=np.array([200,0])
+Vviento=np.array([0,-40])
+r=Vavion+Vviento
+print("La velocidad resultante es=",r)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 8")
+u=np.array([2/3,-2/3,-1/3])
+v=np.array([2,-2,2])
+producto_punto=np.dot(u,v)
+norma=np.linalg.norm(v) ** 2
+proyeccion=(producto_punto/norma)*v
+print("Proyección de u sobre v=", proyeccion)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 9")
+u=np.array([1,-1,1,-1])
+v=np.array([2,-3,-1,-2])
+producto_punto=np.dot(u,v)
+norma=np.linalg.norm(v) ** 2
+proyeccion=(producto_punto/norma)*v
+print("Proyección de u sobre v=", proyeccion)
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejercicio 10")
+print("Los vectores ortogonales a u=(3,1) son cualquier vector x(1,-3)")
+
+
+from sympy import symbols, Matrix, pprint
+
+
+def solve_system(coefficients, constants):
+    """Resuelve un sistema de ecuaciones lineales y muestra la solución."""
+    A = Matrix(coefficients)
+    b = Matrix(constants)
+    try:
+        solution = A.LUsolve(b)
+        print("\nSolución:")
+        pprint(solution)
+    except ValueError:
+        print("\nSin solución única (sistema inconsistente o infinitas soluciones).")
+
+
+# ===== Tarea 2_001 
+print("\n" + "="*50)
+print(" SOLUCIONES TAREA 2_001 (10 PROBLEMAS) ")
+print("="*50)
+
+
+# Problema 1: Sistema no lineal 
+print("\nProblema ①: No es lineal (no se resuelve con matrices).")
+
+
+# Problema 2: x = 3 + (1/6)t, y = 6
+print("\nProblema ②: Solución paramétrica")
+t = symbols('t')
+x = 3 + (1/6)*t
+y = 6
+print(f"x = {x}, y = {y} (t libre)")
+
+
+# Problema 3: x - 5y = 21, 6x + 5y = 21 → x=6, y=-3
+print("\nProblema ③:")
+A = [[1, -5], [6, 5]]
+b = [21, 21]
+solve_system(A, b)
+
+
+# Problema 4: x - y = 4, 2y + z = 6, 3z = 6 → x=6, y=2, z=2
+print("\nProblema ④:")
+A = [
+    [1, -1, 0],
+    [0, 2, 1],
+    [0, 0, 3]
+]
+b = [4, 6, 6]
+solve_system(A, b)
+
+
+# Problema 5: x + y = 2, 3x + 2y = 2 → 0=10 (sin solución)
+print("\nProblema ⑤:")
+A = [[1, 1], [3, 2]]
+b = [2, 2]
+solve_system(A, b)
+
+
+# Problema 6: 2x1 + 3x2 = -5, 3x1 - x2 = -2 → x1=-1, x2=-1
+print("\nProblema ⑥:")
+A = [[2, 3], [3, -1]]
+b = [-5, -2]
+solve_system(A, b)
+
+
+# Problema 7: 5x1 - 3x2 + 2x3 = 3,Sin solución
+print("\nProblema ⑦:")
+A = [
+    [5, -3, 2],
+    [2, 4, -1],
+    [1, -11, 4]
+]
+b = [3, 7, 3]
+solve_system(A, b)
+
+
+# Problema 8: X1 + 4X3 = 13, Infinitas soluciones (X3 = t)
+print("\nProblema ⑧:")
+A = [
+    [1, 0, 4],
+    [4, -2, 1],
+    [2, -2, -7]
+]
+b = [13, 7, -19]
+solve_system(A, b)
+
+
+# Problema 9: X1 - 2X2 + 5X3 = 2,Infinitas soluciones
+print("\nProblema ⑨:")
+C = [
+    [1, -2, 5],
+    [3, 2, -1]
+]
+B = [2, -2]
+solve_system(A, b)
+
+
+# Problema 10: Sistema 4x4 → X1=1, X2=1, X3=1, X4=1
+print("\nProblema ⑩:")
+A = [
+    [1, 0, 0, 3],
+    [0, 2, -1, -1],
+    [0, 3, 0, -2],
+    [2, -1, 4, 0]
+]
+b = [4, 0, 1, 5]
+solve_system(A, b)
+
+
+# ===== Tarea 2_002 
+print("\n" + "="*50)
+print(" SOLUCIONES TAREA 2_002 (10 PROBLEMAS) ")
+print("="*50)
+
+
+# Problema 1: 4x5 (no especificado)
+print("\nProblema ①: No hay ecuaciones definidas.")
+
+
+# Problema 2: x1 + 2x2 + x3 = 0, x3 = -1 → x1 = 1 - 2t, x2 = t
+print("\nProblema ②:")
+t = symbols('t')
+x1 = 1 - 2*t
+x2 = t
+x3 = -1
+print(f"Solución paramétrica: x1 = {x1}, x2 = {x2}, x3 = {x3}")
+
+
+# Problema 3: Sistema 3x3 → x1=1, x2=1, x3=1
+print("\nProblema ③:")
+A = [
+    [2, 1, 0],
+    [1, -2, 1],
+    [1, 0, 1]
+]
+b = [0, -2, 0]
+solve_system(A, b)
+
+
+# Problema 4: x + 2y = 7, 2x + y = 8 → x=3, y=2
+print("\nProblema ④:")
+A = [[1, 2], [2, 1]]
+b = [7, 8]
+solve_system(A, b)
+
+
+# Problema 5: -3x + 5y = -22, 3x + 4y = 4 → x=4, y=-2
+print("\nProblema ⑤:")
+A = [[-3, 5], [3, 4]]
+b = [-22, 4]
+solve_system(A, b)
+
+
+# Problema 6: Sistema 3x3 → x=4, y=-2, z=?
+print("\nProblema ⑥:")
+A = [
+    [-3, 5, 0],
+    [3, 4, 0],
+    [4, -8, 0]
+]
+b = [-22, 4, 32]
+solve_system(A, b)  # Nota: Sistema redundante
+
+
+# Problema 7: x + ay = 0, x + y = 6, 3x - 2y = 8 → Sin solución
+print("\nProblema ⑦:")
+a = symbols('a')
+A = [
+    [1, a],
+    [1, 1],
+    [3, -2]
+]
+b = [0, 6, 8]
+solve_system(A, b)
+
+
+# Problema 8: Ejemplo adicional (no en el PDF)
+print("\nProblema ⑧: No especificado en el documento.")
+
+
+# Problema 9: Sistema 3x3 → X1=8, X2=10, X3=6
+print("\nProblema ⑨:")
+A = [
+    [2, -1, 3],
+    [0, 2, -1],
+    [7, -5, 0]
+]
+b = [5, -1, 0]  # Ajustado según operaciones
+solve_system(A, b)
+
+
+# Problema 10: Sistema 3x3 con infinitas soluciones
+print("\nProblema ⑩:")
+A = [
+    [1, 1, -5],
+    [1, 0, -2],
+    [2, -1, -1]
+]
+b = [0, 0, 0]
+solve_system(A, b)
+
+
+#Tarea 3_1
+#4.
+from sympy import symbols, Eq, solve
+import numpy as np
+x,y=symbols ('x y')
+E= np.array([[x+2, 8, -3],
+              [1, 2*y, 2*x],
+              [7, -2, y+2]])
+F= np.array([[2*x+6, 8, -3],
+              [1, 18, -8],
+              [7, -2, 11]])
+eq1= Eq(x+2,2*x +6)
+eq2= Eq(2*y, 18)
+eq3= Eq(2*x,-8)
+eq4= Eq(y+2,11)
+sol=solve ((eq1,eq2,eq3,eq4), (x,y))
+print ("Tarea 3_1\n")
+print("4.\n")
+print(E)
+print(F)
+print (sol)
+#8.
+k=2
+c=.5
+A = np.array([[2, 1, 1],
+              [-1,-1, 4]])
+
+
+B = np.array([[2, -3, 4],
+              [-3, 1, -2]])
+
+
+C = np.array([[2, 3, 4],
+              [0, 1, -1],
+              [2, 0, 1]])
+
+
+D = np.array([[0, 6, 2],
+              [4, 1, 0],
+              [-1, 2, 4]])
+A2= A*k
+A5=A*c
+C2=C*k
+C5=C*c
+suma1=A+B
+suma2=A5+B
+suma3=C+D
+suma4=C5-D
+
+
+resta1=A-B
+resta2=A2-B
+resta3=C-D
+resta4=C2-D
+#Imprimir primero las matrices
+print("\n8.")
+print("\nMatriz A:")
+print (A)
+print("\nMatriz B:")
+print (B)
+#Imprimir las operaciones de el 8.
+print("\nMatriz A+B: ")
+print(suma1)
+print("\nMatriz A-B:")
+print(resta1)
+print("\nMatriz 2A:")
+print(A2)
+print("\nMatriz 2A-B:")
+print(resta2)
+print("\nMatriz B + 1/2A:")
+print(suma2)
+
+
+#Imprimir las operaciones del ejercicio 10:
+print ("\n 10.")
+print("\nMatriz A:")
+print (C)
+print("\nMatriz B:")
+print (D)
+print("\nMatriz A+B:")
+print(suma3)
+print("\nMatriz A-B:")
+print(resta3)
+print("\nMatriz 2A:")
+print(C2)
+print("\nMatriz 2A-B:")
+print(resta4)
+print("\nMatriz B + 1/2A:")
+print(suma4)
+
+
+#18.
+print("\n18.")
+G= np.array([[2, -2],
+              [-1, 4]
+              ])
+H= np.array ([[4,1],
+                [2,-2]])
+print("\nMatriz A:")
+print(G)
+print ("\nMatriz B:")
+print (H)
+producto_GH=np.dot(G, H)
+producto_HG=np.dot(H, G)
+print("\nAB:")
+print (producto_GH)
+print("\nBA:")
+print (producto_HG)
+
+
+#20.
+print("\n20.")
+I=np.array ([[1, -1, 7], [2, -1, 8], [3, 1, -1] ])
+J=np.array ([[1, 1, 2], [2, 1, 1], [1, -3, 2]])
+print("\nMatriz A:")
+print(I)
+print ("\nMatriz B:")
+print(J)
+producto_IJ=I@J
+producto_JI=J@I
+print("\nAB")
+print (producto_IJ)
+print("\nBA")
+print(producto_JI)
+
+
+#28.
+print("\n28.")
+L=np.array ([[2, 1, 2], [3, -1, -2], [-2, 1, -2]])
+M= np.array ([[4, 0, 1, 3], [-1, 2, -3, -1], [-2, 1, 4, 3]])
+producto_LM=L@M
+print("\nMatriz A:")
+print(L)
+print ("\nMatriz B:")
+print (M)
+print("\nAB:")
+print(producto_LM)
+print("\nBA no es posible")
+
+
+#40.
+
+
+print("\n40.")
+from sympy import Matrix
+
+
+
+
+O = Matrix([
+    [1,  2,  1, 3],
+    [1, -1,  0, 1],
+    [0,  1, -1, 2]
+])
+
+
+null_space = O.nullspace()
+t=symbols('t')
+
+
+print("Soluciones del sistema Ax = 0:")
+solucion_40 = t * null_space[0]
+print(solucion_40)
+
+
+#50.
+print("\n50.")
+x1, x2, x3 = symbols('x1 x2 x3')
+
+
+P = Matrix([
+    [1, 2, 4],
+    [-1, 0, 2],
+    [0, 1, 3]
+])
+b = Matrix([1, 3, 2])
+x = Matrix([x1, x2, x3])
+
+
+eq = Eq(P * x, b)
+
+
+solucion_50 = solve(eq, (x1, x2, x3))
+print(solucion_50)
+
+
+#60.
+print("\n60.")
+Q=np.array ([[3, 0, 0], [0, -5, 0], [0, 0, 0]])
+R=np.array ([[-7, 0, 0], [0, 4, 0], [0, 0, 12]])
+producto_QR=Q@R
+producto_RQ=R@Q
+print ("\nMatriz A:")
+print (Q)
+print ("\nMatriz B")
+print (R)
+print("\nAB:")
+print(producto_QR)
+print("\nBA:")
+print(producto_RQ)
+
+
+#79
+print ("\n79.")
+S=np.array ([[125, 100, 75],
+[100, 175, 125]])
+T=np.array ([3.5, 6.00])
+ganancia=T@S
+print ("\nMatriz A:",S)
+print ("\nMatriz B:",T)
+print("AB:", ganancia)
+
+
+#Tarea 3_2
+
+
+A=np.array([[4, 11], [-2, -1], [9, 3]])
+B=np.array ([[-5, -1], [3, 4], [0, 13]])
+C=np.array ([[7, 5], [-9, -1], [6, -1]])
+sexto=1/6
+solucion_6=-A + sexto*(B+C)
+print ("\nTarea 3_2")
+print("\n6.\n")
+print ("\nMatriz A:",A, "\n")
+print ("\nMatriz B:",B, "\n")
+print ("\nMatriz C:",C, "\n")
+print (solucion_6)
+
+
+#14.
+print("\n14.")
+D=np.array ([[-2,-1], [1, 0], [3, -4]])
+E=np.array ([[0,3], [2,0], [-4,-1]])
+a=3*D-2*E
+b=D - .5*E
+c=.5*(E-3*D)
+d=-1*(D+2*E)
+print("\na):","\n", a)
+print("\nb):","\n", b)
+print("\nc):","\n", c)
+print("\nd):","\n", d)
+
+
+#18.
+print("\n18.")
+F=np.array([[1, 3], [-1, 2]])
+G=np.array([[0, 1], [-1, 0]])
+solucion_18=F@G
+print("\nBC:\n",solucion_18 )
+
+
+#22.
+print ("\n22.")
+A_22=np.array ([[-4, 2], [1,-3]])
+B_22=np.array ([[1, -5, 0], [-2, 3, 3]])
+C_22=([[-3, 4], [0, 1], [-1, 1]])
+AB_22= A_22@B_22
+BC_22=B_22@C_22
+solucion_22a=AB_22@C_22
+solucion_22b=A_22@BC_22
+print("\n(AB)C:\n",solucion_22a)
+print("\nA(BC):\n", solucion_22b)
+
+
+#24.
+print("\n24.")
+A_24=np.array([[.25, .5], [.5, .5]])
+B_24=np.array([[.5, .5], [.5, .25]])
+AB_24=A_24@B_24
+BA_24=B_24@A_24
+print ("\nAB:\n", AB_24, "\nBA:\n", BA_24, "\nNo son iguales.")
+
+
+#26.
+print("\n26.")
+A_26=np.array ([[1, 2, 3], [0, 5, 4], [3, -2, 1]])
+B_26=np.array ([[4, -6, 3], [5, 4 , 4], [-1, 0, 1]])
+C_26=np.array ([[0, 0, 0], [0, 0, 0], [4, -2, 3]])
+AC_26=A_26@C_26
+BC_26=B_26@C_26
+print("\nAC:", AC_26, "= \n BC:", BC_26)
+
+
+#28.
+print("\n28.")
+A_28=np.array ([[2, 4], [2, 4]])
+B_28=np.array ([[1, -2], [-.5, 1]])
+AB_28=A_28@B_28
+print("\nAB:\n", AB_28)
+
+
+#38.
+
+
+print ("\n38.")
+import numpy as np
+A_38=np.array ([[6, -7 ,19], [-7, 0, 23], [19, 23, -32]])
+A_T=A_38.T
+print ("\nA:\n", A_38, "\nA transpuesta:\n", A_T)
+
+
+#40.
+print ("\n40.")
+A_40=np.array ([[1, 2], [0, -2]])
+B_40=np.array ([[-3, -1], [2, 1]])
+#Transpuestas de A y B
+A40_T=A_40.T
+B40_T=B_40.T
+#Producto normal de A y B
+AB_40=A_40@B_40
+#Transpuesta de AB
+AB_T=(AB_40).T
+#A transpuesta por B transpuesta
+AB40_T=B40_T@A40_T
+print ("\n(AB)^T:\n", AB_T)
+print ("\nB^T A^T:\n", AB40_T)
+
+
+#44.
+print("\n44.")
+A_44=np.array ([[1, -1], [3, 4], [0, -2]])
+
+
+A44_T=A_44.T
+A_T_A=A44_T@A_44
+A_A_T=A_44@A44_T
+print("\nA^T*A: \n", A_T_A, "\nA*A^T:\n", A_A_T)
+
+
+#Tarea 3_3
+#6.
+print("\n Tarea 3_3\n 6.")
+A_6=np.array ([[2, -17, 11], [-1, 11, -7], [0, 3, -2]])
+B_6=np.array ([[1, 1, 2], [2, 4, -3], [3, 6, -5]])
+inversa_A6=A_6@B_6
+print ("\nMatriz A:",A_6,"\nMatriz B:", B_6,"\nInversa de A:", "\n",inversa_A6)
+
+
+#10.
+print ("\n10.")
+A_10=np.array([[1, -2], [2, -3]])
+inversa_A10=np.linalg.inv(A_10)
+print("\nMatriz A:\n",A_10, "\nInversa de A:\n",inversa_A10)
+
+
+#14.
+print ("\n14.")
+A_14=np.array([[1, 2, 2], [3, 7, 9], [-1, -4, -7]])
+inversa_A14=np.linalg.inv(A_14)
+print("\nMatriz A:\n",A_14, "\nInversa de A:\n",inversa_A14)
+
+
+#22.
+print ("\n22.")
+A_22=np.array([[.1, .2, .3], [-.3, .2, .2], [.5, .5, .5]])
+inversa_A22=np.linalg.inv(A_22)
+print("\nMatriz A:\n",A_22, "\nInversa de A:\n",inversa_A22)
+
+
+#40.
+print ("\n40.")
+A_40=np.array ([[6, 0, 4], [-2, 7, -1], [3, 1, 2]])
+A_cuadrada=A_40@A_40
+inversa_A40=np.linalg.inv(A_40)
+prod_inv_A40=inversa_A40@inversa_A40
+inversa_sqrt_A40=np.linalg.inv(A_cuadrada)
+print ("\nMatriz A:\n", A_40)
+print ("\nA^-1*A^-1:\n",prod_inv_A40)
+print ("\nA^2^-1:\n",inversa_sqrt_A40)
+
+
+#44.
+print ("\n44.")
+A_44=np.array([[1, -4, 2], [0, 1, 3], [4, 2, 1]])
+B_44=np.array ([[6, 5, -3], [-2, 4, -1], [1, 3, 4]])
+AB_44=B_44@A_44
+A44_T=A_44.T
+A2_44=.5*A_44
+print("\nMatriz A:\n", A_44, "\nMatriz B:\n", B_44)
+print("\na)\n",AB_44, "\nb)\n",A44_T, "\nc)\n", A2_44)
+
+
+#46.
+print ("\n46.")
+Matriz_46=np.array ([[2, -1], [2, 1]])
+resultado1=np.array([-3, 7])
+resultado2=np.array([-1, -3])
+inversa_46=np.linalg.inv(Matriz_46)
+solucion_1_46=inversa_46@resultado1
+solucion_2_46=inversa_46@resultado2
+print("\na): 2x-y=-3 \n 2x+y=7 \n b): 2x-y=-1 \n 2x+y=-3")
+print ("\na) x=A^-1b=\n",solucion_1_46, "\n b) x=A^-1b=\n",solucion_2_46,)
+#48.
+
+
+print ("\n48.")
+Matriz_48=np.array([[1, 1, -2], [1, -2, 1], [1, -1, -1]])
+resultado1=np.array([0, 0, -1])
+resultado2=np.array([-1, 2, 0])
+inversa_48=np.linalg.inv(Matriz_48)
+solucion_1_48=inversa_48@resultado1
+solucion_2_48=inversa_48@resultado2
+print("\na): x1 + x2 -2x3=0 \n x1 -2x2 + x3=0 \n x1 - x2 - x3=-1 \n b): x1 + x2 -2x3=-1 \n x1 -2x2 + x3=2 \n x1 - x2 - x3=0")
+print ("\na) x=A^-1b=\n",solucion_1_48, "\n b) x=A^-1b=\n",solucion_2_48,)
+
+
+#74.
+
+
+print("\n74.")
+print("\n A tiene inversa si a_i_j diferente de 0 para todo i=1,2,...n")
+
+
+#75.
+
+
+print ("\n75.")
+A1_75=np.array ([[-1, 0, 0], [0, 3, 0], [0, 0, 2]])
+A2_75=np.array ([[.5, 0, 0], [0, 1/3, 0] , [0, 0, 1/4]])
+inversa_A1_75=np.linalg.inv(A1_75)
+inversa_A2_75=np.linalg.inv(A2_75)
+print ("\na) Matriz A:\n", A1_75,"\nInversa de A:\n",inversa_A1_75 ,"\nb) Matriz B:\n", A2_75, "\nInversa de A:\n",inversa_A2_75)
+
+
+#Tarea 3_4
+print ("\nTarea 3_4\n 4.")
+A4 = np.array([[0, 1],
+               [1, 0]])
+I4 = np.identity(2)
+E4 = I4.copy()
+E4[[0, 1]] = E4[[1, 0]]
+print(A4,"\n")
+print("¿A es elemental?", np.array_equal(A4, E4))
+#8.
+print ("\n8.\n")
+A8 = np.array([[1, 0, 0],
+               [0, 0, 0],
+               [0, 0, -3]])
+
+
+# Determinante (si es 0, no es invertible)
+det_A8 = np.linalg.det(A8)
+print(A8,"\n")
+print("¿A es elemental?", det_A8 != 0)
+
+
+#10.
+print ("\n10.")
+E_10=np.array([[1,0,1], [0,1,0], [0,0,1]])
+A_10=np.array ([[1,2,-3], [0,1,2], [-1, 2, 0]])
+C_10=E_10@A_10
+print(E_10, "\nMatriz A:\n", A_10, "=\n", C_10)
+
+
+#16.
+print ("\n16.")
+import sympy as sp
+
+
+# Definir la matriz A
+A = sp.Matrix([
+    [1, 3, 0],
+    [2, 5, -1],
+    [3, -2, -4]
+])
+print("Matriz original A:")
+sp.pprint(A)
+rref_matrix, pivots = A.rref()
+
+
+print("\nMatriz en forma escalonada por renglones:")
+sp.pprint(rref_matrix)
+
+
+print("\nPosiciones de los pivotes:", pivots)
+
+
+#18.
+print ("\n18.")
+A_18=np.array([[5,0], [0,1]])
+inversa_A18 = np.linalg.inv(A_18)
+print("\nMatriz A:\n", A_18, "\nInversa de A:\n", inversa_A18)
+
+
+#20.
+print ("\n20.")
+A_20=np.array ([[1, 0, 0], [0, 1, 0], [0, -3, 1]])
+inversa_A20= np.linalg.inv(A_20)
+print("\nMatriz A:\n", A_20, "\nInversa de A:\n", inversa_A20)
+
+
+#30.
+print ("\n30.")
+A_30=np.array ([[1, 1], [2, 1]])
+E1=np.array ([[1,0],[-2,1]])
+E2=np.array ([[1,1],[0,1]])
+E3=np.array ([[1,0],[0,-1]])
+print ("\nMatriz A:\n", A_30, "\nMatrices elementales\n", E3,"\n", E2, "\n", E1)
+
+
+#32.
+print ("\n32.")
+A_32=np.array ([[1, 2, 3], [2, 5, 6], [1, 3, 4]])
+E1=np.array ([[1, 0, 0],[-2, 1, 0], [0, 0, 1]])
+E2=np.array ([[1, 0, 0],[0, 1, 0], [-1, 0, 1]])
+E3=np.array ([[1, 0, 0],[0, 1, 0], [0, -1, 1]])
+E4=np.array ([[1, 0, -3],[0, 1, 0], [0, 0, 1]])
+E5=np.array ([[1, -2, 0],[0, 1, 0], [0, 0, 1]])
+print ("\nMatriz A:\n", A_32, "\nMatrices elementales\n", E5,"\n", E4, "\n", E3, "\n", E2,"\n", E1)
+
+
+#42.
+import numpy as np
+
+
+def lu_no_pivot(A):
+    n = A.shape[0]
+    L = np.eye(n)
+    U = A.copy().astype(float)
+
+
+    for i in range(n):
+        for j in range(i+1, n):
+            factor = U[j, i] / U[i, i]
+            L[j, i] = factor
+            U[j, :] = U[j, :] - factor * U[i, :]
+   
+    return L, U
+A42 = np.array([[-2, 1],
+                [-6, 4]])
+
+
+L42, U42 = lu_no_pivot(A42)
+
+
+print("\nEjercicio 42")
+print("L =\n", L42)
+print("U =\n", U42)
+print("Verificación LU =\n", np.dot(L42, U42))
+print()
+# 44.
+
+
+A44 = np.array([
+    [2, 0, 0],
+    [0, -3, 1],
+    [10, 12, 3]
+])
+
+
+L44, U44 = lu_no_pivot(A44)
+
+
+print("\n44. ")
+print("L =\n", L44)
+print("U =\n", U44)
+print("Verificación LU =\n", np.dot(L44, U44))
+
+
+print("TAREA 4.1")
+#4.1, 4
+A = [[-3, 1],
+     [5, 2]]
+
+
+det = A[0][0] * A[1][1] - A[0][1] * A[1][0]
+print(" ")
+print("\nEjercicio 4:")
+print("Determinante:", det)
+#4.1, 12
+import sympy
+
+
+def determinante_simbolico(matriz):
+    """
+    Calcula el determinante de una matriz 2x2 con elementos simbólicos.
+
+
+    Args:
+        matriz (list of lists): Una lista de listas representando la matriz 2x2.
+                                 Los elementos pueden ser expresiones simbólicas.
+
+
+    Returns:
+        sympy.Expr: La expresión simbólica del determinante.
+    """
+    if len(matriz) != 2 or any(len(fila) != 2 for fila in matriz):
+        raise ValueError("La matriz debe ser de 2x2.")
+
+
+    a = matriz[0][0]
+    b = matriz[0][1]
+    c = matriz[1][0]
+    d = matriz[1][1]
+
+
+    determinante = (a * d) - (b * c)
+    return determinante
+
+
+# Definir la variable simbólica x
+x = sympy.Symbol('x')
+
+
+# Definir la matriz
+matriz_simbolica = [[x - 2, 0],
+                     [4, x - 4]]
+
+
+# Calcular el determinante simbólico
+determinante = determinante_simbolico(matriz_simbolica)
+
+
+# Imprimir el resultado
+print(" ")
+print("\nEjercicio 12:")
+print(f"El determinante de la matriz es: {determinante}")
+
+
+# Opcionalmente, puedes simplificar la expresión del determinante
+determinante_simplificado = sympy.simplify(determinante)
+print(f"El determinante simplificado es: {determinante_simplificado}")
+#4.1, 16
+import sympy as sp
+
+
+# Definir la matriz
+A = sp.Matrix([
+    [-3,  4,  2],
+    [ 6,  3,  1],
+    [ 4, -7, -8]
+])
+
+
+# Crear matrices vacías para menores y cofactores
+minores = sp.Matrix.zeros(3, 3)
+cofactores = sp.Matrix.zeros(3, 3)
+
+
+# Calcular menores y cofactores
+for i in range(3):
+    for j in range(3):
+        # Submatriz eliminando fila i y columna j
+        submatriz = A.minor_submatrix(i, j)
+        menor = submatriz.det()
+        signo = (-1) ** (i + j)
+        minores[i, j] = menor
+        cofactores[i, j] = signo * menor
+
+
+# Mostrar resultados
+print(" ")
+print("\nEjercicio 16:")
+print("Matriz original A:")
+sp.pprint(A)
+
+
+print("\nMenores de cada entrada:")
+sp.pprint(minores)
+
+
+print("\nCofactores de cada entrada:")
+sp.pprint(cofactores)
+#4.1,18
+import sympy as sp
+
+
+# Matriz del ejercicio 16
+A = sp.Matrix([
+    [-3, 4, 2],
+    [ 6, 3, 1],
+    [ 4, -7, -8]
+])
+
+
+# Parte (a): expansión por cofactores con el tercer renglón (fila 2)
+fila = 2  # tercera fila (índice 2)
+det_a = 0
+print(" ")
+print("\nEjercicio 18")
+print("Expansión por el tercer renglón:")
+for j in range(A.cols):
+    elem = A[fila, j]
+    cofactor = A.cofactor(fila, j)
+    print(f"A[2,{j}] = {elem}, Cofactor = {cofactor}, Producto = {elem * cofactor}")
+    det_a += elem * cofactor
+print("\nDeterminante por tercer renglón:", det_a)
+
+
+# Parte (b): expansión por cofactores con la tercera columna (columna 2)
+col = 2  # tercera columna (índice 2)
+det_b = 0
+print("\nExpansión por la tercera columna:")
+for i in range(A.rows):
+    elem = A[i, col]
+    cofactor = A.cofactor(i, col)
+    print(f"A[{i},2] = {elem}, Cofactor = {cofactor}, Producto = {elem * cofactor}")
+    det_b += elem * cofactor
+print("\nDeterminante por tercera columna:", det_b)
+
+
+# Verificación final con .det()
+print("\nVerificación con A.det():", A.det())
+
+
+#4.1, 22
+import numpy as np
+
+
+def encontrar_menor(matriz, fila, columna):
+    """
+    Encuentra el menor de un elemento específico de una matriz.
+
+
+    Args:
+        matriz (numpy.ndarray): La matriz de entrada.
+        fila (int): El índice de la fila del elemento.
+        columna (int): El índice de la columna del elemento.
+
+
+    Returns:
+        float: El menor del elemento.
+    """
+    submatriz = np.delete(np.delete(matriz, fila, axis=0), columna, axis=1)
+    menor = np.linalg.det(submatriz)
+    return menor
+
+
+def determinante_por_cofactores(matriz, fila_expansion=0):
+    """
+    Calcula el determinante de una matriz utilizando la expansión por cofactores a lo largo de una fila específica.
+
+
+    Args:
+        matriz (numpy.ndarray): La matriz de entrada.
+        fila_expansion (int, opcional): El índice de la fila a lo largo de la cual se realiza la expansión. Por defecto es la primera fila (índice 0).
+
+
+    Returns:
+        float: El determinante de la matriz.
+
+
+    Raises:
+        ValueError: Si la matriz no es cuadrada.
+        IndexError: Si el índice de la fila de expansión está fuera de rango.
+    """
+    filas, columnas = matriz.shape
+    if filas != columnas:
+        raise ValueError("La matriz debe ser cuadrada para calcular el determinante.")
+    if not (0 <= fila_expansion < filas):
+        raise IndexError(f"El índice de la fila de expansión {fila_expansion} está fuera de rango.")
+
+
+    determinante = 0
+    for j in range(columnas):
+        menor = encontrar_menor(matriz, fila_expansion, j)
+        cofactor = ((-1)**(fila_expansion + j)) * menor
+        determinante += matriz[fila_expansion, j] * cofactor
+    return determinante
+
+
+# Ejercicio 22
+matriz_22 = np.array([[-3, 0, 0],
+                      [ 7, 11, 0],
+                      [ 1, 2, 2]])
+
+
+determinante_22 = determinante_por_cofactores(matriz_22)
+print(" ")
+print("Ejercicio 22:")
+print(f"El determinante de la matriz es: {determinante_22}")
+
+
+# Ejercicio 24
+matriz_24 = np.array([[0.1, 0.2, 0.3],
+                      [-0.3, 0.2, 0.2],
+                      [0.5, 0.4, 0.4]])
+
+
+determinante_24 = determinante_por_cofactores(matriz_24)
+print(" ")
+print("\nEjercicio 24:")
+print(f"El determinante de la matriz es: {determinante_24}")
+#4.1, 28
+import numpy as np
+
+
+def determinante_cofactores(matriz):
+    """
+    Calcula el determinante de una matriz cuadrada utilizando la expansión por cofactores.
+
+
+    Args:
+        matriz (list of lists): La matriz cuadrada.
+
+
+    Returns:
+        float: El determinante de la matriz.
+
+
+    Raises:
+        ValueError: Si la matriz no es cuadrada.
+    """
+    n = len(matriz)
+    if n != len(matriz[0]):
+        raise ValueError("La matriz debe ser cuadrada.")
+
+
+    if n == 1:
+        return matriz[0][0]
+
+
+    if n == 2:
+        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
+
+
+    determinante = 0
+    for j in range(n):
+        submatriz = [fila[:j] + fila[j+1:] for fila in matriz[1:]]
+        signo = (-1) ** (0 + j)  # Expandimos a lo largo de la primera fila (índice 0)
+        determinante += matriz[0][j] * signo * determinante_cofactores(submatriz)
+
+
+    return determinante
+if __name__ == "__main__":
+    matriz = [
+        [3, 0, 7, 0],
+        [2, 6, 11, 12],
+        [4, 1, -1, 2],
+        [1, 5, 2, 10]
+    ]
+
+
+    try:
+        det = determinante_cofactores(matriz)
+        print(" ")
+        print("\nEjercicio 28:")
+        print(f"El determinante de la matriz es: {det}")
+    except ValueError as e:
+        print(f"Error: {e}")
+
+
+    # También puedes verificar el resultado con la función de NumPy
+    matriz_np = np.array(matriz)
+    det_np = np.linalg.det(matriz_np)
+    print(f"Determinante calculado con NumPy: {det_np}")
+import numpy as np
+
+
+def determinante_cofactores(matriz):
+    """
+    Calcula el determinante de una matriz cuadrada utilizando la expansión por cofactores.
+
+
+    Args:
+        matriz (list of lists): La matriz cuadrada.
+
+
+    Returns:
+        float: El determinante de la matriz.
+
+
+    Raises:
+        ValueError: Si la matriz no es cuadrada.
+    """
+    n = len(matriz)
+    if n != len(matriz[0]):
+        raise ValueError("La matriz debe ser cuadrada.")
+
+
+    if n == 1:
+        return matriz[0][0]
+
+
+    if n == 2:
+        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
+
+
+    determinante = 0
+    for j in range(n):
+        submatriz = [fila[:j] + fila[j+1:] for fila in matriz[1:]]
+        signo = (-1) ** (0 + j)  # Expandimos a lo largo de la primera fila (índice 0)
+        determinante += matriz[0][j] * signo * determinante_cofactores(submatriz)
+
+
+    return determinante
+
+
+if __name__ == "__main__":
+    matriz_c = [
+        [4, 3, -2, 1, 2],
+        [0, 0, 0, 0, 0],
+        [1, 2, -7, 13, 12],
+        [6, -2, 5, 6, 7],
+        [1, 4, 2, 0, 9]
+    ]
+
+
+    try:
+        det_c = determinante_cofactores(matriz_c)
+        print(" ")
+        print("Ejercicio 32")
+        print(f"El determinante de la matriz C es: {det_c}")
+    except ValueError as e:
+        print(f"Error: {e}")
+
+
+
+
+    # Verificación con NumPy
+    matriz_c_np = np.array(matriz_c)
+    det_c_np = np.linalg.det(matriz_c_np)
+    print(f"Determinante de la matriz C calculado con NumPy: {det_c_np}")
+
+
+from sympy import symbols, Eq, solve
+import numpy as np
+
+
+# Matriz triangular del ejercicio 42
+matrix_42 = np.array([
+    [4, 0, 0, 0],
+    [-1, 1/2, 0, 0],
+    [3, 5, 3, 0],
+    [-8, 7, 0, -2]
+])
+
+
+# Calcular el determinante
+det_42 = np.linalg.det(matrix_42)
+print(" ")
+print("Ejercicio 42")
+print(f"Determinante de la matriz triangular en el ejercicio 42: {det_42}")
+
+
+# Definir la variable
+x = symbols('x')
+
+
+# Plantear la ecuación derivada de la matriz
+eq = Eq((x + 3) * (x - 1) - (-4) * 1, 0)
+
+
+# Resolver la ecuación
+solution = solve(eq, x)
+
+
+# Imprimir la solución
+print(" ")
+print("Ejercicio 48")
+print(f"La solución para x es: {solution}")
+
+
+print("TAREA 4.2")
+import numpy as np
+
+
+# Matrices de los ejercicios
+matrix_exercise_2 = np.array([[-4, 12], [5, -15]])
+matrix_exercise_4 = np.array([[-4, 8, -4], [3, 0, 3], [2, 0, 2]])
+
+
+# Calcular determinantes
+det_exercise_2 = np.linalg.det(matrix_exercise_2)
+det_exercise_4 = np.linalg.det(matrix_exercise_4)
+
+
+# Respuesta en palabras
+respuesta_ejercicio_2 = "El determinante de la matriz en el Ejercicio 2 es 0. La segunda fila es multiplo de la primera fila entonces el determinante es 0."
+respuesta_ejercicio_4 = "El determinante de la matriz en el Ejercicio 4 es 0. La primera y tercera fila son lo mismo, por esto el determinante es 0."
+print(" ")
+print("Ejercicio 2")
+print(respuesta_ejercicio_2)
+print(" ")
+print("Ejercicio 4")
+print(respuesta_ejercicio_4)
+import numpy as np
+
+
+# Matrices de los ejercicios
+matrix_26 = np.array([[1, 1, 1], [2, -1, -2], [1, -2, -1]])
+matrix_28 = np.array([[3, 0, 6], [2, -3, 4], [1, -2, 2]])
+matrix_30 = np.array([[3, 8, -7], [0, -5, 4], [0, -15, 20]])
+matrix_32 = np.array([[9, -4, 2, 5],[2, 7, 6, -5],[4, 1, -2, 0],[7, 3, 4, 10]])
+
+
+# Calcular los determinantes
+det_26 = np.linalg.det(matrix_26)
+det_28 = np.linalg.det(matrix_28)
+det_30 = np.linalg.det(matrix_30)
+det_32 = np.linalg.det(matrix_32)
+print(" ")
+print("Ejercicio 26")
+print(f"Determinante de la matriz en el ejercicio 26: {det_26}")
+print(" ")
+print("Ejercicio 28")
+print(f"Determinante de la matriz en el ejercicio 28: {det_28}")
+print(" ")
+print("Ejercicio 30")
+print(f"Determinante de la matriz en el ejercicio 30: {det_30}")
+print(" ")
+print("Ejercicio 32")
+print(f"Determinante de la matriz en el ejercicio 32: {det_32}")
+import numpy as np
+
+
+# Matriz del ejercicio 36
+matrix_36 = np.array([[3, -2, 4, 3, 1],
+ [-1, 0, 2, 1, 0],
+ [5, -1, 0, 3, 2],
+ [4, 7, -8, 0, 0],
+ [1, 2, 3, 0, 2]])
+
+
+# Calcular el determinante
+det_36 = np.linalg.det(matrix_36)
+print(" ")
+print("Ejercicio 36")
+print(f"Determinante de la matriz en el ejercicio 36: {det_36}")
+import numpy as np
+
+
+# Matrices de los ejercicios 40 y 42
+matrix_40 = np.array([[0, 0, 1], [0, 1, 0], [1, 0, 0]])
+matrix_42 = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+
+
+# Calcular los determinantes
+det_40 = np.linalg.det(matrix_40)
+det_42 = np.linalg.det(matrix_42)
+print(" ")
+print("Ejercicio 40")
+print(f"Determinante de la matriz en el ejercicio 40: {det_40}")
+print(" ")
+print("Ejercicio 42")
+print(f"Determinante de la matriz en el ejercicio 42: {det_42}")
+import sympy as sp
+
+
+# Definir la variable theta
+theta = sp.symbols('theta')
+
+
+# Matrices de los ejercicios (a) y (b)
+matrix_a = sp.Matrix([[sp.cos(theta), sp.sin(theta)], [-sp.sin(theta), sp.cos(theta)]])
+matrix_b = sp.Matrix([[sp.sin(theta), 1], [1, sp.sin(theta)]])
+
+
+# Calcular los determinantes
+det_a = matrix_a.det()
+det_b = matrix_b.det()
+print(" ")
+print("Ejercicio 45 a")
+print(f"Determinante de la matriz en el ejercicio (a): {det_a}")
+print(" ")
+print("Ejercicio 45 b")
+print(f"Determinante de la matriz en el ejercicio (b): {det_b}")
+print(" ")
+print("TAREA 4.3")
+import numpy as np
+
+
+# Matrices del ejercicio 1
+A1 = np.array([[-2, 4], [1, -2]])
+B1 = np.array([[1, 0], [1, -1]])
+
+
+# Calcular los determinantes de A y B
+det_A1 = np.linalg.det(A1)
+det_B1 = np.linalg.det(B1)
+
+
+# Calcular el producto AB
+AB1 = np.dot(A1, B1)
+
+
+# Calcular el determinante de AB
+det_AB1 = np.linalg.det(AB1)
+
+
+# Verificar que det(A) * det(B) = det(AB)
+verification_1 = np.isclose(det_A1 * det_B1, det_AB1)
+
+
+print(f"Ejercicio 1:")
+print(f"Determinante de A: {det_A1}")
+print(f"Determinante de B: {det_B1}")
+print(f"Producto AB: \n{AB1}")
+print(f"Determinante de AB: {det_AB1}")
+print(f"Verificación: {verification_1}")
+
+
+import numpy as np
+
+
+# Matrices del ejercicio 4
+A4 = np.array([[2, 0, 1], [-1, 1, -2], [3, 1, 0]])
+B4 = np.array([[2, -1, 4], [0, 1, 3], [3, -2, 1]])
+
+
+# Calcular los determinantes de A y B
+det_A4 = np.linalg.det(A4)
+det_B4 = np.linalg.det(B4)
+
+
+# Calcular el producto AB
+AB4 = np.dot(A4, B4)
+
+
+# Calcular el determinante de AB
+det_AB4 = np.linalg.det(AB4)
+
+
+# Verificar que det(A) * det(B) = det(AB)
+verification_4 = np.isclose(det_A4 * det_B4, det_AB4)
+
+
+print(f"Ejercicio 4:")
+print(f"Determinante de A: {det_A4}")
+print(f"Determinante de B: {det_B4}")
+print(f"Producto AB: \n{AB4}")
+print(f"Determinante de AB: {det_AB4}")
+print(f"Verificación: {verification_4}")
+import numpy as np
+
+
+# Matrices de los ejercicios 8, 10 y 12
+matrix_8 = np.array([[5, 15], [10, -20]])
+matrix_10 = np.array([[4, 16, 0], [12, -8, 8], [16, 20, -4]])
+matrix_12 = np.array([[40, 25, 10], [30, 5, 20], [15, 35, 45]])
+
+
+# Calcular los determinantes
+det_8 = np.linalg.det(matrix_8)
+det_10 = np.linalg.det(matrix_10)
+det_12 = np.linalg.det(matrix_12)
+print(" ")
+print("Ejercicio 8")
+print(f"Determinante de la matriz en el ejercicio 8: {det_8}")
+print(" ")
+print("Ejercicio 10")
+print(f"Determinante de la matriz en el ejercicio 10: {det_10}")
+print(" ")
+print("Ejercicio 12")
+print(f"Determinante de la matriz en el ejercicio 12: {det_12}")
+import numpy as np
+
+
+# Matrices del ejercicio 14
+A = np.array([[1, -2], [1, 0]])
+B = np.array([[3, -2], [0, 0]])
+
+
+# Calcular los determinantes de A y B
+det_A = np.linalg.det(A)
+det_B = np.linalg.det(B)
+
+
+# Calcular la suma A+B
+A_plus_B = A + B
+
+
+# Calcular el determinante de A+B
+det_A_plus_B = np.linalg.det(A_plus_B)
+
+
+# Verificar que det(A) + det(B) = det(A+B)
+verification = np.isclose(det_A + det_B, det_A_plus_B)
+print(" ")
+print(f"Ejercicio 14:")
+print(f"Determinante de A: {det_A}")
+print(f"Determinante de B: {det_B}")
+print(f"Suma A+B: \n{A_plus_B}")
+print(f"Determinante de A+B: {det_A_plus_B}")
+print(f"Verificación: {verification}")
+import numpy as np
+
+
+# Matriz del ejercicio 20
+matrix_20 = np.array([[1, 0, 4], [0, 6, 3], [2, -1, 4]])
+
+
+# Calcular el determinante
+det_20 = np.linalg.det(matrix_20)
+
+
+# Decidir si la matriz es singular o no singular
+if det_20 == 0:
+    singularity = "singular"
+else:
+    singularity = "no singular"
+print(" ")
+print("Ejercicio 20")
+print(f"Determinante de la matriz en el ejercicio 20: {det_20}")
+print(f"La matriz es {singularity}")
+import numpy as np
+
+
+# Matriz del ejercicio 26
+A26 = np.array([[1, -2], [2, 2]])
+
+
+# Calcular la inversa de la matriz
+A26_inv = np.linalg.inv(A26)
+
+
+# Calcular el determinante de la inversa
+det_A26_inv = np.linalg.det(A26_inv)
+
+
+# Calcular el determinante de la matriz original
+det_A26 = np.linalg.det(A26)
+
+
+# Verificar el resultado aplicando la fórmula ∣A−1∣=1/∣A∣
+verification_26 = np.isclose(det_A26_inv, 1 / det_A26)
+print(" ")
+print(f"Ejercicio 26:")
+print(f"Inversa de A: \n{A26_inv}")
+print(f"Determinante de la inversa de A: {det_A26_inv}")
+print(f"Determinante de A: {det_A26}")
+print(f"Verificación: {verification_26}")
+
+
+# Matriz del ejercicio 28
+A28 = np.array([[1, 0, 1], [2, -1, 2], [1, -2, 3]])
+
+
+# Calcular la inversa de la matriz
+A28_inv = np.linalg.inv(A28)
+
+
+# Calcular el determinante de la inversa
+det_A28_inv = np.linalg.det(A28_inv)
+
+
+# Calcular el determinante de la matriz original
+det_A28 = np.linalg.det(A28)
+
+
+# Verificar el resultado aplicando la fórmula ∣A−1∣=1/∣A∣
+verification_28 = np.isclose(det_A28_inv, 1 / det_A28)
+print(" ")
+print(f"\nEjercicio 28:")
+print(f"Inversa de A: \n{A28_inv}")
+print(f"Determinante de la inversa de A: {det_A28_inv}")
+print(f"Determinante de A: {det_A28}")
+print(f"Verificación: {verification_28}")
+import numpy as np
+
+
+# Matriz de coeficientes del ejercicio 34
+matrix_34 = np.array([[1, 1, -1], [2, -1, 1], [3, -2, 2]])
+
+
+# Calcular el determinante
+det_34 = np.linalg.det(matrix_34)
+
+
+# Decidir si el sistema tiene una única solución
+if det_34 != 0:
+    solution = "El sistema tiene una única solución."
+else:
+    solution = "El sistema no tiene una única solución."
+print(" ")
+print(f"Determinante de la matriz de coeficientes en el ejercicio 34: {det_34}")
+print(solution)
+import numpy as np
+
+
+# Matriz del ejercicio 38
+A = np.array([[-4, 10], [5, 6]])
+
+
+# (a) Calcular el determinante de la matriz transpuesta
+A_T = A.T
+det_A_T = np.linalg.det(A_T)
+
+
+# (b) Calcular el determinante de la matriz al cuadrado
+A_2 = np.dot(A, A)
+det_A_2 = np.linalg.det(A_2)
+
+
+# (c) Calcular el determinante del producto de la matriz y su transpuesta
+AA_T = np.dot(A, A.T)
+det_AA_T = np.linalg.det(AA_T)
+
+
+# (d) Calcular el determinante de 2 veces la matriz
+det_2A = np.linalg.det(2 * A)
+
+
+# (e) Calcular el determinante de la inversa de la matriz
+A_inv = np.linalg.inv(A)
+det_A_inv = np.linalg.det(A_inv)
+print(" ")
+print(f"Ejercicio 38:")
+print(f"(a) Determinante de A^T: {det_A_T}")
+print(f"(b) Determinante de A^2: {det_A_2}")
+print(f"(c) Determinante de AA^T: {det_AA_T}")
+print(f"(d) Determinante de 2A: {det_2A}")
+print(f"(e) Determinante de A^-1: {det_A_inv}")
+print(" ")
+print("TAREA 4.4")
+import numpy as np
+
+
+def adjoint(matrix):
+    cofactor_matrix = np.zeros(matrix.shape)
+    for row in range(matrix.shape[0]):
+        for col in range(matrix.shape[1]):
+            minor = np.delete(np.delete(matrix, row, axis=0), col, axis=1)
+            cofactor_matrix[row, col] = ((-1) ** (row + col)) * np.linalg.det(minor)
+    return cofactor_matrix.T
+
+
+def inverse(matrix):
+    det = np.linalg.det(matrix)
+    if det == 0:
+        return None
+    else:
+        adj = adjoint(matrix)
+        return adj / det
+
+
+# Ejercicio 2
+A2 = np.array([[-1, 0], [0, 4]])
+adj_A2 = adjoint(A2)
+inv_A2 = inverse(A2)
+
+
+print("Ejercicio 2:")
+print("Adjunta de A:")
+print(adj_A2)
+print("Inversa de A:")
+print(inv_A2)
+
+
+# Ejercicio 4
+A4 = np.array([[1, 2, 3], [0, 1, -1], [2, 2, 2]])
+adj_A4 = adjoint(A4)
+inv_A4 = inverse(A4)
+
+
+print("\nEjercicio 4:")
+print("Adjunta de A:")
+print(adj_A4)
+print("Inversa de A:")
+print(inv_A4)
+
+
+# Ejercicio 6
+A6 = np.array([[0, 1, 1], [1, 2, 3], [-1, -1, -2]])
+adj_A6 = adjoint(A6)
+inv_A6 = inverse(A6)
+
+
+print("\nEjercicio 6:")
+print("Adjunta de A:")
+print(adj_A6)
+print("Inversa de A:")
+print(inv_A6)
+import numpy as np
+
+
+def cramer_rule(A, B):
+    det_A = np.linalg.det(A)
+    if det_A == 0:
+        return None
+   
+    n = len(B)
+    solutions = []
+   
+    for i in range(n):
+        Ai = np.copy(A)
+        Ai[:, i] = B
+        det_Ai = np.linalg.det(Ai)
+        solutions.append(det_Ai / det_A)
+   
+    return solutions
+
+
+# Matriz de coeficientes (A)
+A = np.array([[2, -1], [3, 2]])
+
+
+# Vector de términos independientes (B)
+B = np.array([-10, -1])
+
+
+# Resolver el sistema de ecuaciones usando la regla de Cramer
+solution = cramer_rule(A, B)
+print(" ")
+print("Ejercicio 18")
+print("Solución del sistema de ecuaciones:")
+print(f"x1 = {solution[0]}")
+print(f"x2 = {solution[1]}")
+import numpy as np
+
+
+def cramer_rule(A, B):
+    det_A = np.linalg.det(A)
+    if det_A == 0:
+        return None
+   
+    n = len(B)
+    solutions = []
+   
+    for i in range(n):
+        Ai = np.copy(A)
+        Ai[:, i] = B
+        det_Ai = np.linalg.det(Ai)
+        solutions.append(det_Ai / det_A)
+   
+    return solutions
+
+
+# Ejercicio 24
+A24 = np.array([[-0.4, 0.8], [0.2, 0.3]])
+B24 = np.array([1.6, 0.6])
+solution_24 = cramer_rule(A24, B24)
+print(" ")
+print("Ejercicio 24")
+print("Ejercicio 24:")
+print(f"x1 = {solution_24[0]}")
+print(f"x2 = {solution_24[1]}")
+
+
+# Ejercicio 26
+A26 = np.array([[4, -2, 3], [2, 2, 5], [8, -5, -2]])
+B26 = np.array([-2, 16, 4])
+solution_26 = cramer_rule(A26, B26)
+print(" ")
+print("Ejercicio 26")
+print("\nEjercicio 26:")
+print(f"x1 = {solution_26[0]}")
+print(f"x2 = {solution_26[1]}")
+print(f"x3 = {solution_26[2]}")
+import numpy as np
+
+
+# Función para encontrar el área de un triángulo dado sus vértices
+def area_of_triangle(vertices):
+    matrix = np.array([
+        [vertices[0][0], vertices[0][1], 1],
+        [vertices[1][0], vertices[1][1], 1],
+        [vertices[2][0], vertices[2][1], 1]
+    ])
+    return 0.5 * abs(np.linalg.det(matrix))
+
+
+# Ejercicio 38: Área del triángulo
+vertices_38 = [[1, 1], [2, 4], [4, 2]]
+area_38 = area_of_triangle(vertices_38)
+print(" ")
+print("Ejercico 38")
+print(f"Ejercicio 38: Área del triángulo = {area_38}")
+import numpy as np
+
+
+# Función para determinar si los puntos son colineales
+def are_collinear(points):
+    matrix = np.array([
+        [points[0][0], points[0][1], 1],
+        [points[1][0], points[1][1], 1],
+        [points[2][0], points[2][1], 1]
+    ])
+    return np.linalg.det(matrix) == 0
+
+
+# Ejercicio 42: Puntos colineales
+points_42 = [[-1, 0], [1, 1], [3, 3]]
+collinear_42 = are_collinear(points_42)
+print(" ")
+print("Ejercicio 42")
+print(f"Ejercicio 42: ¿Son colineales? {'Sí' if collinear_42 else 'No'}")
+import numpy as np
+
+
+# Función para encontrar la ecuación de una recta que pasa por dos puntos
+def line_equation(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+   
+    # Calcular los coeficientes de la ecuación de la recta
+    a = y2 - y1
+    b = x1 - x2
+    c = x2 * y1 - x1 * y2
+   
+    # Formatear la ecuación de la recta
+    equation = f"{a}x + {b}y + {c} = 0"
+    return equation
+
+
+# Ejercicio 46: Ecuación de la recta
+points_46 = [[-4, 7], [2, 4]]
+equation_46 = line_equation(points_46[0], points_46[1])
+print(" ")
+print("Ejercicio 46")
+print(f"Ejercicio 46: Ecuación de la recta: {equation_46}")
+import numpy as np
+
+
+# Función para encontrar el volumen de un tetraedro dado sus vértices
+def volume_of_tetrahedron(vertices):
+    matrix = np.array([
+        [vertices[0][0] - vertices[1][0], vertices[0][1] - vertices[1][1], vertices[0][2] - vertices[1][2]],
+        [vertices[2][0] - vertices[1][0], vertices[2][1] - vertices[1][1], vertices[2][2] - vertices[1][2]],
+        [vertices[3][0] - vertices[1][0], vertices[3][1] - vertices[1][1], vertices[3][2] - vertices[1][2]]
+    ])
+    return abs(np.linalg.det(matrix)) / 6
+
+
+# Ejercicio 50: Volumen del tetraedro
+vertices_50 = [[1, 1, 1], [0, 0, 0], [2, 1, -1], [-1, 1, 2]]
+volume_50 = volume_of_tetrahedron(vertices_50)
+print(" ")
+print("Ejercicio 50")
+print(f"Ejercicio 50: Volumen del tetraedro = {volume_50}")
+
+
+import numpy as np
+from sympy import Matrix
+
+
+def gram_schmidt(vectores):
+    """Aplica el proceso de Gram-Schmidt y normaliza los vectores."""
+    base_ortogonal = []
+    for v in vectores:
+        w = v.astype(float)  
+        for u in base_ortogonal:
+            w -= np.dot(v, u) / np.dot(u, u) * u
+        if not np.allclose(w, np.zeros_like(w)):
+            base_ortogonal.append(w)
+    # Normalización
+    base_ortonormal = [v / np.linalg.norm(v) for v in base_ortogonal]
+    return base_ortonormal
+
+
+
+
+v1 = np.array([1, 0, 1], dtype=float)
+v2 = np.array([2, 1, 0], dtype=float)
+v3 = np.array([0, 1, 2], dtype=float)
+B = [v1, v2, v3]
+
+
+# Aplicar Gram-Schmidt
+base_ortonormal = gram_schmidt(B)
+print("Base ortonormal obtenida:")
+for i, vector in enumerate(base_ortonormal, 1):
+    print(f"u{i} = {np.round(vector, 4)}")
+
+
+# Verificación
+print("\nVerificación de ortogonalidad:")
+for i in range(len(base_ortonormal)):
+    for j in range(i + 1, len(base_ortonormal)):
+        dot = np.dot(base_ortonormal[i], base_ortonormal[j])
+        print(f"u{i+1} · u{j+1} = {dot:.2f} (≈ 0)")
+
+
+print("\nVerificación de norma unitaria:")
+for i, v in enumerate(base_ortonormal, 1):
+    norma = np.linalg.norm(v)
+    print(f"||u{i}|| = {norma:.2f} (≈ 1)")
+# ///////////////////////////////////////////////////////////////////////
+print("Ejemplo Valores propios y vectores propios")
+A = np.array([
+    [2, -1, 0],
+    [-1, 2, -1],
+    [0, -1, 2]
+])
+# Calcular valores propios y vectores propios
+valores_propios, vectores_propios = np.linalg.eig(A)
+# Mostrar resultados
+print("Valores propios:")
+print(np.round(valores_propios, 2)) 
+print("\nVectores propios:")
+print(np.round(vectores_propios, 2))  
+
+
+# ///////////////////////////////////////////////////////////////////////
+print("Ejemplo Matriz Simétrica y Diagonalización")
+A=np.array([
+    [4, -2, 1, 0],
+    [-2, 4, -2, 1],
+    [1, -2, 3, -1],
+    [0, 1, -1, 2]
+])
+valores_propios, vectores_propios = np.linalg.eig(A)
+D = np.diag(valores_propios)
+Q = vectores_propios
+# Imprimir resultados
+print("Matriz A:")
+print(A)
+print("\nMatriz diagonal D:")
+print(D)
+print("\nMatriz de cambio de base Q:")
+print(Q)
+print("\nVerificación de que: Q^-1 * A *Q = D")
+print(np.linalg.inv(Q) @ A @ Q) 
+print("Al cumplirse las condiciones de arribe, la matriz A es simetrica")
+
+
+
+
+algebra_lineal_aplicaciones = {
+    "Mecatronica implementada a Robótica": [
+        "Representación de posiciones, velocidades y fuerzas con vectores y matrices",
+        "Transformaciones lineales para calcular trayectorias y orientaciones"
+    ],
+    "Sistemas de control": [
+        "Modelado de sistemas mediante ecuaciones en forma matricial",
+        "Análisis de estabilidad y diseño de controladores"
+    ],
+    "Inteligencia artificial": [
+        "Uso en redes neuronales para entrenamiento y reconocimiento de patrones"
+    ],
+    "Diseño de piezas": [
+        "Resolución de problemas complejos usando operaciones matriciales",
+        "Base matemática para la simulación y diseño de sistemas mecatrónicos"
+    ]
+}
+
+
+# Mostrar resumen
+for area, aplicaciones in algebra_lineal_aplicaciones.items():
+    print(f"\n{area}:")
+    for aplicacion in aplicaciones:
+        print(f"  - {aplicacion}")
+
+
+
+
+
+
+
+
+
+
